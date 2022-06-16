@@ -9,16 +9,20 @@ fun main() {
 }
 
 val rocketList1: List<Rocket> = listOf(
-    Rocket(name = "Coete 1", maxLoad = 34.0, crashChance = 0.70),
-    Rocket(name = "Coete 2", maxLoad = 50.0, crashChance = 0.15),
-    Rocket(name = "Coete 3", maxLoad = 43.0, crashChance = 0.31)
+    Rocket(name = "Coete 1", maxLoad = 15.0, crashChance = 0.0),
+    Rocket(name = "Coete 2", maxLoad = 18.0, crashChance = 0.0),
+    Rocket(name = "Coete 3", maxLoad = 55.0, crashChance = 0.0)
 )
 
 val supplyList: List<Supplies> = listOf(
-    Supplies(name = "Water", weight = 2.0, quantity = 2),
-    Supplies(name = "Food", weight = 3.0, quantity = 3),
-    Supplies(name = "Oxygen", weight = 1.3, quantity = 2),
-    Supplies(name = "Seeds", weight = 0.73, quantity = 10),
+    Supplies(name = "Water", weight = 1.0, quantity = 4),
+    Supplies(name = "Food", weight = 1.0, quantity = 13),
+    Supplies(name = "Oxygen", weight = 1.3, quantity = 5),
+    Supplies(name = "Seeds", weight = 0.73, quantity = 3),
+    Supplies(name = "earth", weight = 2.0, quantity = 6),
+    Supplies(name = "animals", weight = 1.0, quantity = 2),
+    Supplies(name = "minerals", weight = 1.3, quantity = 2),
+    Supplies(name = "tech", weight = 0.73, quantity = 1),
 )
 
 

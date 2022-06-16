@@ -8,19 +8,19 @@ class SimulatorImplementation(
     val rocketList: List<Rocket>,
 ): Simulator{
     var supplies = suppliesList.toMutableList()
-    var rockets =rocketList.toMutableList()
+    var rockets = rocketList.toMutableList()
     override fun executeSimulation() {
         loadRockets()
     }
     private fun loadRockets(){
-        rockets.forEach { rocket ->
+        rockets.forEach{rocket ->
             val load = rocket.maxLoad
             var sum = 0.0
-            supplies.forEach { supply ->
-                if (sum < load){
+            supplies.forEach {supply ->
+                if (load - sum > (supply.weight * supply.quantity)){
                     rocket.container.add(supply)
                     sum += (supply.weight * supply.quantity)
-                    supplies.remove(supply)
+                    supplies = supplies.filter { it.name != supply.name } as MutableList<Supplies>
                 }
             }
         }
